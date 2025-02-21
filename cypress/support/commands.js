@@ -1,4 +1,6 @@
-Cypress.Commands.add('login' , (username , password) => {
+
+// Hanya Contoh Login
+Cypress.Commands.add('contohLogin' , (username , password) => {
     cy.get('.panel > .header > .authorization-link > a').click()
     cy.get('#email').type(username)
     cy.get('.login-container > .block-customer-login > .block-content > #login-form > .fieldset > .password > .control > #pass').type(password)

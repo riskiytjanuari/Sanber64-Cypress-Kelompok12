@@ -1,0 +1,23 @@
+{
+  "name": "sanber64-cypress-kelompok12",
+  "version": "1.0.0",
+  "description": "quiz 2",
+  "homepage": "https://github.com/riskiytjanuari/Sanber64-Cypress-Kelompok12#readme",
+  "bugs": {
+    "url": "https://github.com/riskiytjanuari/Sanber64-Cypress-Kelompok12/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/riskiytjanuari/Sanber64-Cypress-Kelompok12.git"
+  },
+  "license": "ISC",
+  "author": "team 12",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "cypress": "^14.0.3"
+  }
+}

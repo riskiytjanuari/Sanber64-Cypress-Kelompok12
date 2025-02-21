@@ -3,4 +3,4 @@
 2. Riski Ferdian
 3. Audrey
 4. Alexander Romian Simarmata
-6. Agnes
+5. Agnes

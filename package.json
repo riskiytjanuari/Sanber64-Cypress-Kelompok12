@@ -1,23 +1,22 @@
 {
   "name": "sanber64-cypress-kelompok12",
   "version": "1.0.0",
-  "description": "1. Ahmad Haris Rifani\r 2. Riski Ferdian\r 3. Audrey\r 4. Alexander Romian Simarmata\r 6. Agnes",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "description": "quiz 2",
+  "homepage": "https://github.com/riskiytjanuari/Sanber64-Cypress-Kelompok12#readme",
+  "bugs": {
+    "url": "https://github.com/riskiytjanuari/Sanber64-Cypress-Kelompok12/issues"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/riskiytjanuari/Sanber64-Cypress-Kelompok12.git"
   },
-  "keywords": [],
-  "author": "",
   "license": "ISC",
+  "author": "team 12",
   "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/riskiytjanuari/Sanber64-Cypress-Kelompok12/issues"
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "homepage": "https://github.com/riskiytjanuari/Sanber64-Cypress-Kelompok12#readme",
   "devDependencies": {
     "cypress": "^14.0.3"
   }

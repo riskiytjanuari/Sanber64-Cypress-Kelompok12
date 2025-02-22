@@ -6,8 +6,8 @@ describe('contohLogin', () => {
   })
 
   it('Contoh Login', () => {
-    cy.fixture('contoh.json').then((contoh) => {
-    const datauser = contoh;
+    cy.fixture('users.json').then((users) => {
+    const datauser = users[1];
     cy.contohLogin(datauser.email , datauser.password)
     contohPage.verifyWelcomePage()
     })

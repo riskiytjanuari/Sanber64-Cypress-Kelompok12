@@ -4,5 +4,9 @@
         "lastName": "Team",
         "email": "twelve@mail.com",
         "password": "Sanber64"
+    },
+    {
+        "email": "team12@mail.com",
+        "password": "Team12Sanber"
     }
 ]

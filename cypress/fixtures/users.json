@@ -14,5 +14,11 @@
         "streetName" : "Jalanin Aja Dulu",
         "cityName" : "Jakarta",
         "phoneNumber" : "081234000001"
-    }
+    },
+    {
+        "firstName": "Budiono",
+        "lastName": "Siregar",
+        "email": "kapal@mail.com",
+        "password": "kapallaut"
+    } 
 ]

@@ -1,3 +1,5 @@
+import homePage from "./page-object/homePage"
+import registerPage from "./page-object/registerPage"
 import stgCartPage from "./page-object/riskiPageObject/stgCartPage"
 import stgCheckoutPage from "./page-object/riskiPageObject/stgCheckoutPage"
 import stgHomePage from "./page-object/riskiPageObject/stgHomePage"
@@ -32,6 +34,13 @@ Cypress.Commands.add('contohLogin' , (username , password) => {
     cy.get('#email').type(username)
     cy.get('.login-container > .block-customer-login > .block-content > #login-form > .fieldset > .password > .control > #pass').type(password)
     cy.get('.login-container > .block-customer-login > .block-content > #login-form > .fieldset > .actions-toolbar > div.primary > #send2 > span').click()
+})
+
+Cypress.Commands.add('stepToRegister', () => {
+    cy.visit('')
+    homePage.verifyWelcomeText()
+    homePage.goToRegisterPage()
+    registerPage.verifyOnRegisterPage()
 })
 
 // flow from after logged in until show shipping address page

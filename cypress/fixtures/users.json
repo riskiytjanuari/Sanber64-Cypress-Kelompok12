@@ -8,5 +8,11 @@
     {
         "email": "team12@mail.com",
         "password": "Team12Sanber"
-    }
+    },
+    {
+        "firstName": "Budiono",
+        "lastName": "Siregar",
+        "email": "kapal@mail.com",
+        "password": "kapallaut"
+    } 
 ]

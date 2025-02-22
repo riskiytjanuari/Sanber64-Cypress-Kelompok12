@@ -6,10 +6,10 @@ describe('contohLogin', () => {
   })
 
   it('Contoh Login', () => {
-    cy.fixture('users.json').then((users) => {
-    const datauser = users[1];
+    cy.fixture('contoh.json').then((contoh) => {
+    const datauser = contoh;
     cy.contohLogin(datauser.email , datauser.password)
-    contohPage.verifyWelcomePage()
+    contohPage.verifyWelcomePage
     })
   })
 })

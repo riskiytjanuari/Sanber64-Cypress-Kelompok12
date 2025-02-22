@@ -1,11 +1,13 @@
-import stgHomePage from "../../support/page-object/riskiPage/stgHomePage"
-import stgCartPage from "../../support/page-object/riskiPage/stgCartPage"
+import stgHomePage from "../../support/page-object/riskiPageObject/stgHomePage"
+import stgCartPage from "../../support/page-object/riskiPageObject/stgCartPage"
+import stgCheckoutPage from "../../support/page-object/riskiPageObject/stgCheckoutPage"
 
-describe('Normal login', () => {
+describe('Checkout flow', () => {
 beforeEach(() => {
 cy.visit('')
 })
 
+// Positif Case
 it('Check shipping addres page', () => {
     cy.fixture('users.json').then((users) => {
     // login with user index 1   
@@ -34,10 +36,23 @@ it('Check shipping addres page', () => {
     // click proceed button
     stgCartPage.clickProceed()
     // verify page already redirect to checkout / shipping
-    stgCartPage.verifyOrderSummary()
+    stgCheckoutPage.verifyOrderSummary()
     })
 })
 
+// Positif Case
+it.only('Add Adress shipping with valid data', () => {
+    cy.fixture('users.json').then((users) => {
+        // login with user index 0   
+        const datauser = users[0];
+        cy.contohLogin(datauser.email , datauser.password)
+        // the step from "validate success login" until "open shipping address page"
+        cy.stepToCheckout()
+        stgCheckoutPage.inputCompanyField('Sanber Team 12')
+        stgCheckoutPage.inputStreetName('Jalan Mawar')
+        stgCheckoutPage.inputCityName('Jakarta')
+    })
 
+    })
 
 })

@@ -10,6 +10,7 @@ describe('Verify Register Functionality', () => {
             const dataUser = users[2]
             registerPage.fillRegistrationForm(dataUser.firstName, dataUser.lastName, dataUser.email, dataUser.password)
         })
+        // cy.submitForm()
     })
 
     it('Register with Empty Form', () => {

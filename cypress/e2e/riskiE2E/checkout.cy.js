@@ -15,14 +15,21 @@ it('Check shipping addres page', () => {
     cy.contohLogin(datauser.email , datauser.password)
     // validate success login
     stgHomePage.verfifWelcomeText()
-    // scroll page 1000px
+    // scroll page 1100px
     cy.scrollTo(0,1000)
     // click selected product
     stgHomePage.addToCartArgusWeather()
+    cy.wait(1500)
+    // verify add to chart is success
+    //stgHomePage.verifyShowProductDetail()
     // select size
+    stgHomePage.selectSizeWeather()
+    // verify selected size
     stgHomePage.selectSizeWeather()
     // select color
     stgHomePage.selectColorWeather()
+    // verifiy selected color
+    stgHomePage.verifySelectColorWeather
     // add to cart
     stgHomePage.addToCartWeather()
     // waiting page to load 3s
@@ -35,7 +42,7 @@ it('Check shipping addres page', () => {
 
     // click proceed button
     stgCartPage.clickProceed()
-    // verify page already redirect to checkout / shipping
+    // verify proceed success by redirect to checkout / shipping
     stgCheckoutPage.verifyOrderSummary()
     })
 })
@@ -51,6 +58,13 @@ it.only('Add Adress shipping with valid data', () => {
         stgCheckoutPage.inputCompanyField('Sanber Team 12')
         stgCheckoutPage.inputStreetName('Jalan Mawar')
         stgCheckoutPage.inputCityName('Jakarta')
+        stgCheckoutPage.selectProvince()
+        stgCheckoutPage.inputPostCode(12345)
+        stgCheckoutPage.selectCountry()
+        stgCheckoutPage.inputPhoneNumber('081234000111')
+        stgCheckoutPage.clickRadioButton()
+        stgCheckoutPage.clickNextButton()
+
     })
 
     })

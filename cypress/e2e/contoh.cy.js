@@ -9,7 +9,7 @@ describe('contohLogin', () => {
     cy.fixture('contoh.json').then((contoh) => {
     const datauser = contoh;
     cy.contohLogin(datauser.email , datauser.password)
-    contohPage.verifyWelcomePage()
+    contohPage.verifyWelcomePage
     })
   })
 })

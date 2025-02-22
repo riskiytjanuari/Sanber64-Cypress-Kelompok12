@@ -1,5 +1,5 @@
 import stgHomePage from "../support/page-object/stgHomePage"
-import stgChartPage from "../support/page-object/stgChartPage"
+import stgCartPage from "../support/page-object/stgCartPage"
 
 describe('Normal login', () => {
 beforeEach(() => {
@@ -11,11 +11,18 @@ it.only('login with second account for checkout flow', () => {
     const datauser = users[1];
     cy.contohLogin(datauser.email , datauser.password)
     stgHomePage.verfifWelcomeText()
-    cy.scrollTo(0,500)
+    cy.scrollTo(0,1000)
     stgHomePage.addToCartArgusWeather()
     stgHomePage.selectSizeWeather()
     stgHomePage.selectColorWeather()
     stgHomePage.addToCartWeather()
+    cy.wait(3000)
+    stgCartPage.clickShowCart()
+    // stgCartPage.editQuantity()
+    // cy.wait(1000)
+    // stgCartPage.updateQuantity()
+    stgCartPage.clickProceed()
+    stgCartPage.verifyOrderSummary()
     })
 })
 })

@@ -11,14 +11,14 @@ class stgCheckOutPage{
     next_button = '.button'
 
     
-
-
-
     verifyOrderSummary(){
         cy.get(this.order_summary).should('contain.text' , 'Shipping Address')
     }
     inputCompanyField(text){
         cy.get(this.company_field).type(text)
+    }
+    verifyInputCompanyField(text){
+        cy.get(this.company_field).should('have.text' , text)
     }
     inputStreetName(text){
         cy.get(this.street_name).type(text)

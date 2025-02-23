@@ -4,7 +4,7 @@ class stgHomePage {
     select_size =  '#option-label-size-143-item-167' 
     select_color =  '#option-label-color-93-item-52'
     add_to_cart = 'button[title="Add to Cart"]'
-    product_detail = '.tab-label-description-title'
+    product_detail = '#tab-label-description-title'
     size_validation = "//div[@class='swatch-attribute size']/span[@class='swatch-attribute-selected-option']"
     color_validation = "//div[@class='swatch-attribute color']/span[@class='swatch-attribute-selected-option']"
 

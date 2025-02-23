@@ -8,5 +8,11 @@
     {
         "email": "team12@mail.com",
         "password": "Team12Sanber"
+    },
+    {
+        "companyName" : "Sanber Twelve 64",
+        "streetName" : "Jalanin Aja Dulu",
+        "cityName" : "Jakarta",
+        "phoneNumber" : "081234000001"
     }
 ]

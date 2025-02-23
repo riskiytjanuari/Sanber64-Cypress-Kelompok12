@@ -3,7 +3,30 @@ import stgCheckoutPage from "./page-object/riskiPageObject/stgCheckoutPage"
 import stgHomePage from "./page-object/riskiPageObject/stgHomePage"
 stgCheckoutPage
 
-// Hanya Contoh Login
+// create random account
+function randomUser(){
+    const randomString = Math.random().toString(36).substring(2,10)
+    const randomEmail = randomString + '@mail.com'
+    return randomEmail
+    }
+    let email = randomUser()
+    let password = 'Sanber64joss'
+
+    function randomFirstName(){
+    const randomFirstName = Math.random().toString(26).substring(2,8)
+    return randomFirstName
+    }
+    let firstname = randomFirstName()
+
+    function randomLastName(){
+    const randomLastName = Math.random().toString(26).substring(2,8)
+    return randomLastName
+    }
+    let lastname = randomLastName()
+
+  // end random account
+
+// Login for normal checkout  purpose
 Cypress.Commands.add('contohLogin' , (username , password) => {
     cy.get('.panel > .header > .authorization-link > a').click()
     cy.get('#email').type(username)
@@ -39,3 +62,15 @@ Cypress.Commands.add('stepToCheckout' , () => {
         stgCheckoutPage.verifyOrderSummary()
 })
 
+// Create random account for filling new address for new user that want to checkout
+Cypress.Commands.add('loginWithRandomAccount' , () => {
+    cy.get('.panel > .header > :nth-child(3) > a').click()
+    cy.get('#firstname').type(firstname)
+    cy.get('#lastname').type(lastname)
+    cy.get('#email_address').type(email)
+    cy.get('#password').type(password)
+    cy.get('#password-confirmation').type(password)
+    cy.get('#form-validate > .actions-toolbar > div.primary > .action > span').click()
+    cy.get('.base').should('have.text' , 'My Account')
+    cy.get('img').click()
+})

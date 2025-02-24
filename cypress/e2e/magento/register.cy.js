@@ -19,7 +19,7 @@ describe('Verify Register Functionality', () => {
         cy.contains('This is required field.').should('be.visible')
     })
 
-    it.only('Register with Existing Email', () => {
+    it('Register with Existing Email', () => {
         cy.fixture("users.json").then((users) => {
             const dataUser = users[4]
             registerPage.fillRegistrationForm(dataUser.firstName, dataUser.lastName, dataUser.email, dataUser.password)

@@ -20,5 +20,11 @@
         "lastName": "Siregar",
         "email": "kapal@mail.com",
         "password": "kapallaut"
-    } 
+    },
+    {
+        "firstName": "John",
+        "lastName": "Pantau",
+        "email": "twelve@mail.com",
+        "password": "Sanber64"
+    }
 ]

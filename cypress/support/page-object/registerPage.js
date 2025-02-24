@@ -5,6 +5,7 @@ class RegisterPage {
     password = '#password'
     pass_confirm = '[name="password_confirmation"]'
     registerButton = 'button[title="Create an Account"]'
+    errorMsg = '#maincontent > div.page.messages > div:nth-child(2) > div > div'
 
     verifyOnRegisterPage() {
         cy.url().should('include', 'customer/account/create')

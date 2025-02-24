@@ -83,3 +83,8 @@ Cypress.Commands.add('loginWithRandomAccount' , () => {
     cy.get('.base').should('have.text' , 'My Account')
     cy.get('img').click()
 })
+
+Cypress.Commands.add('navigateToMyAccount', () => {
+    cy.visit('/customer/account/');
+    cy.url().should('include', '/customer/account');
+  });
